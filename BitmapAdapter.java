@@ -79,10 +79,8 @@ public class BitmapAdapter {
 
             if (bitmap == null) {
                 if (type == TYPE_URL) {
-                    String baseUrl = "https://maps.googleapis.com/maps/api/streetview?";
-
                     try {
-                        URL requestUrl = new URL(baseUrl + key);
+                        URL requestUrl = new URL(key);
                         InputStream content = (InputStream) requestUrl.getContent();
                         bitmap = BitmapFactory.decodeStream(content);
                     } catch (Exception e) {
