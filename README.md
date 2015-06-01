@@ -1,7 +1,11 @@
 # BitmapAdapter
 An Android class for handling bitmap loading from file or network/Internet<br />
 <br />
-This can be called using a single method<br />
+Initialized with<br />
+initBitmapCache();<br />
+This is safe to be called multiple times, it will not destroy the cache if already initialized.<br />
+<br />
+Bitmaps are called using a single method<br />
 getBitmap(String path, Integer type, Integer method, ImageView imageView, BitmapResponse response)<br />
 path: path to the file, filesystem path or url string<br />
 type: url or file request, TYPE_URL or TYPE_FILE<br />
